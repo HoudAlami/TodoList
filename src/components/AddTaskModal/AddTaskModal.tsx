@@ -43,3 +43,21 @@ function AddTaskModal({ onClose, onCreateTask }: AddTaskModalProps) {
 }
 
 export default AddTaskModal;
+
+// Importation de React et des styles :
+// Nous importons React et le fichier de style Sass associé à ce composant.
+// Définition des types de props :
+// Nous définissons le type AddTaskModalProps qui contient deux propriétés :
+// onClose: une fonction qui sera appelée pour fermer la modal.
+// onCreateTask: une fonction qui prend le contenu de la nouvelle tâche en tant que paramètre et sera appelée pour créer la nouvelle tâche.
+// Composant AddTaskModal :
+// AddTaskModal est une fonction qui prend les props onClose et onCreateTask.
+// À l'intérieur de AddTaskModal, nous utilisons l'état local newTaskContent pour stocker le contenu de la nouvelle tâche à créer.
+// Gestion de l'input :
+// Nous avons une fonction inputValue qui est appelée à chaque changement dans l'input. Cette fonction met à jour l'état newTaskContent avec la valeur actuelle de l'input.
+// Création de la tâche :
+// Lorsque l'utilisateur clique sur le bouton "Valider", la fonction createTask est appelée. Cette fonction appelle onCreateTask avec le contenu de la nouvelle tâche, puis appelle onClose pour fermer la modal.
+// Affichage de la modal :
+// Nous affichons la modal avec un titre, un input pour saisir le contenu de la nouvelle tâche, et un bouton "Valider" pour créer la tâche.
+// Le bouton "X" en haut à droite permet de fermer la modal en appelant la fonction onClose.
+// En résumé, le composant AddTaskModal est une fenêtre modale permettant à l'utilisateur de saisir le contenu d'une nouvelle tâche. Une fois la tâche saisie et validée, elle est créée en appelant la fonction onCreateTask, puis la modal est fermée avec la fonction onClose.
