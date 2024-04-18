@@ -1,0 +1,32 @@
+.task {
+  // outline: 1px red solid;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__list {
+    list-style: none;
+    // outline: 1px blue solid;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+  }
+  &__item {
+    // outline: 1px green solid;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    gap: 10px;
+  }
+  &__button {
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}

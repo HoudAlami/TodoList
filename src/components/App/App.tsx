@@ -27,7 +27,11 @@ function App() {
     };
     setTaskArray([...taskArray, newTask]);
     setIdCounter(idCounter + 1);
-    // console.log(newTask);
+    console.log(taskArray);
+  };
+
+  const deleteTask = (taskId: number) => {
+    setTaskArray(taskArray.filter((task) => task.id !== taskId));
   };
   return (
     <div className="app">
@@ -38,7 +42,7 @@ function App() {
       {isActive && (
         <AddTaskModal onClose={closeModal} onCreateTask={createTask} />
       )}
-      <Task tasks={taskArray} />
+      <Task tasks={taskArray} onDeleteTask={deleteTask} />
     </div>
   );
 }
